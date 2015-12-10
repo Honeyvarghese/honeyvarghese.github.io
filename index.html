@@ -50,11 +50,11 @@ Self-organization of fish in the ocean(picture below) is a very good example.
 
 <p><img src="https://cloud.githubusercontent.com/assets/15885993/11704526/ba526f1c-9ea5-11e5-9c83-e42b5de1d85c.png" alt=""></p>
 
-<h1>
-<a id="implementation-details-of-the-engine" class="anchor" href="#implementation-details-of-the-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details of the engine:</h1>
+<h2>
+<a id="implementation-details-of-the-engine" class="anchor" href="#implementation-details-of-the-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details of the engine:</h2>
 
-<h1>
-<a id="simulatoridynomics" class="anchor" href="#simulatoridynomics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulator:IDynomics</h1>
+<h2>
+<a id="simulator-idynomics" class="anchor" href="#simulator-idynomics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulator: IDynomics</h2>
 
 <p>The iDynoMiCS software simulates the growth of microbial communities. iDynoMiCS is written in Java, and uses XML protocol files that allow one to specify easily many different types of simulations. iDynoMiCS writes plain-text XML files as output, and these may be processed using any number of software tools (though we provide some general post-processing routines that run in Matlab and R). In addition to XML files, iDynoMiCS also writes files for POV-Ray, which is used to render 3-D images of the simulation.</p>
 
@@ -64,14 +64,12 @@ Self-organization of fish in the ocean(picture below) is a very good example.
 <p>These are protocol files that define the cell properties(parameters). iDynomics take this protocol files as input and simulate cells that have the property described in the property file.</p>
 
 <h1>
-<a id="pov-ray-files-and-converter" class="anchor" href="#pov-ray-files-and-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pov ray Files and converter</h1>
+<a id="pov-ray-files-and-converter" class="anchor" href="#pov-ray-files-and-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pov-ray Files and converter</h1>
 
 <p>iDynomics output files of the type POV-Ray. Java code can be used to execute these files in POV-ray software and it will produce the png Images. These images describes the growth pattern of the cells at timed interval.</p>
 
 <h1>
 <a id="image-processing" class="anchor" href="#image-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image processing:</h1>
-
-<p>This module performs the cleaning and smoothing of the images.</p>
 
 <p>In order to analyze the regularity of the images we need to clean and make the image smooth.Cleaning is done by removing the light source and reflection while simulating(by changing the header files before POV Ray execution). Smoothing is done by process of dilating and eroding technique. The Image below demonstrates the change in image. </p>
 
