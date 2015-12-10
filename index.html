@@ -86,18 +86,15 @@ Self-organization of fish in the ocean(picture below) is a very good example.
 
 <p>The Kolmogorov complexity of two strings is the length of the shortest algorithm that can transform one string to the other. Exact computation is undecidable, but minimum algorithm length can be approximated by the normalized compression distance (NCD). NCD is defined below, where si and sj are strings, si + sj is the concatenation of si and sj, and C(s) is the compression size of string s:</p>
 
-<p>equation(1)</p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11728628/21b23bcc-9f48-11e5-9205-55adfc0be8df.PNG" alt=""></p>
 
-<p>NCD is a measure of the similarity of the two strings. If the two strings compress smaller together than separately, then NCD will be closer to 0.0. Consider the following cases, where sr is from the set of random strings and ss are simple strings containing regular patterns:
-1.</p>
+<p>NCD is a measure of the similarity of the two strings. If the two strings compress smaller together than separately, then NCD will be closer to 0.0. Consider the following cases, where sr is from the set of random strings and ss are simple strings containing regular patterns:</p>
 
-<p>2.</p>
-
-<p>3.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11728633/297c2cb4-9f48-11e5-9ca1-07b758a4a8a2.PNG" alt=""></p>
 
 <p>Then set complexity of a set of n strings S = {s1, …, sn} is defined:</p>
 
-<p>equation(2)</p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11728631/25bfa0c4-9f48-11e5-90e5-3c24560c0be2.PNG" alt=""></p>
 
 <p>where dij = NCD(si, sj). The distance dij is maximized when NCD(si, sj) = 0.5, which occurs when C(si + sj) ≃ C(si)/2 − C(sj), assuming C(si) &gt; C(sj). In the case of strings in the set being similar, Ψ(S) ≃ 0 indicating the set belongs to the ordered domain and contains little information. Chaotic systems generate strings that appear random and so Ψ(S) is minimized, but not zero because of the C(si) multiplicative term. In the various papers it is shown that Ψ(S) is maximized when the set of strings describe an information dense critical system.</p>
 
