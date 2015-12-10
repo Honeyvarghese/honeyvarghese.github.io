@@ -49,6 +49,15 @@ Self-organization of fish in the ocean(picture below) is a very good example.
 <h4>
 <a id="implementation-details-of-the-engine" class="anchor" href="#implementation-details-of-the-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details of the engine:</h4>
 
+<h1>
+<a id="simulatoridynomics" class="anchor" href="#simulatoridynomics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulator:IDynomics</h1>
+
+<p>The iDynoMiCS software simulates the growth of microbial communities. iDynoMiCS is written in Java, and uses XML protocol files that allow one to specify easily many different types of simulations. iDynoMiCS writes plain-text XML files as output, and these may be processed using any number of software tools (though we provide some general post-processing routines that run in Matlab and R). In addition to XML files, iDynoMiCS also writes files for POV-Ray, which is used to render 3-D images of the simulation.</p>
+
+<p>XML Files:</p>
+
+<p>These are protocol files that define the cell properties(parameters). iDynomics take this protocol files as input </p>
+
 <p>Genetic Algorithms uses the evolution theory to evolve the fittest chromosomes. Here we express the parameter values of the system as genes. The fittest chromosome is the one with genes representing the parameter values that give the best result.Thus the simulation of system with those parameters will result in the self organisation of the cells.</p>
 
 <p>Here the interesting part is the analysis of the result to determine the best chromosome. In other words we need to determine weather the random cells are self organized. Idea here is to find the Set Complexity of the images produced by the simulation of cells using those parameter values. The better organised cell patterns will have better Set Complexity.</p>
