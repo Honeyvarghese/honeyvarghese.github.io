@@ -73,6 +73,10 @@ Self-organization of fish in the ocean(picture below) is a very good example.
 
 <p>This module performs the cleaning and smoothing of the images.</p>
 
+<p>In order to analyze the regularity of the images we need to clean and make the image smooth.Cleaning is done by removing the light source and reflection while simulating(by changing the header files before POV Ray execution). Smoothing is done by process of dilating and eroding technique. The Image below demonstrates the change in image. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11708367/dfc11df4-9ecb-11e5-832d-d27257fd0050.PNG" alt=""></p>
+
 <p>Genetic Algorithms uses the evolution theory to evolve the fittest chromosomes. Here we express the parameter values of the system as genes. The fittest chromosome is the one with genes representing the parameter values that give the best result.Thus the simulation of system with those parameters will result in the self organisation of the cells.</p>
 
 <p>Here the interesting part is the analysis of the result to determine the best chromosome. In other words we need to determine weather the random cells are self organized. Idea here is to find the Set Complexity of the images produced by the simulation of cells using those parameter values. The better organised cell patterns will have better Set Complexity.</p>
