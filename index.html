@@ -126,21 +126,45 @@ The fittest chromosome is the one with genes representing the parameter values t
 
 <p>Here the interesting part is the analysis of the result to determine the best chromosome. In other words we need to determine weather the random cells are self organized. Idea here is to find the Set Complexity of the images produced by the simulation of cells using those parameter values. The better organised cell patterns will have better Set Complexity.</p>
 
-<p>Results:</p>
+<h2>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h2>
+
+<p>Using Java Genetic Algorithm Package(JGAP) I implemented the project and arrived at the following results.</p>
+
+<p>Here Images are named using convention: SetComplexity (muMax, Chemotatic Strength)
+ie Image named 5111(234,1.9) implies images have Set Complexity=5111 and the parameter values used for simulation are muMax=234 and chemotatic strength=1.9</p>
+
+<p>The following result is obtained in the initial iteration of GA with Init Area 750(here init area is proportional to the number of cells in the simulation)</p>
 
 <p><img src="https://cloud.githubusercontent.com/assets/15885993/11825714/e69dd79a-a33d-11e5-9c4d-35cc91cc3140.png" alt=""></p>
 
 <p><img src="https://cloud.githubusercontent.com/assets/15885993/11821146/622ac18e-a325-11e5-9811-3fc682c66b37.PNG" alt=""></p>
 
-<p>Init 1500
-unprocessed
-<img src="https://cloud.githubusercontent.com/assets/15885993/11825187/d74f3426-a33a-11e5-9282-db8e316e2ef7.PNG" alt="">
-processed
-<img src="https://cloud.githubusercontent.com/assets/15885993/11825188/d8ecc44c-a33a-11e5-9188-7b13d8464d18.PNG" alt=""></p>
+<p>The image near the star corresponds to the final image with maximum set complexity.</p>
 
-<p>heatmap</p>
+<p>Next set of experiment was conducted with 1500 Init area, so that the network formation is more obvious.The following results were obtained:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11825187/d74f3426-a33a-11e5-9282-db8e316e2ef7.PNG" alt=""></p>
+
+<p>From the graph we observe that the more organized images are given a lower set complexity. A close look at the images revels that the reduction in set complexity of images with a regular network is because of the images are not smooth. So the image processing technique mentioned in the above image processing section of the project is carried out and the better results shown below are obtained </p>
+
+<p>Evolution of pattern by GA when set complexity is derived from the processed images </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11825188/d8ecc44c-a33a-11e5-9188-7b13d8464d18.PNG" alt=""></p>
+
+<p>Heat Map showing the Set Complexity Values corresponding to the parameter values chosen by the GA</p>
 
 <p><img src="https://cloud.githubusercontent.com/assets/15885993/11825197/e070d320-a33a-11e5-8643-3829c3c3f107.png" alt=""></p>
+
+<p>Here thus GA finally arrived at the chromosome with best chromosomes with genes as expressed below</p>
+
+<p>Gene1: muMax:597</p>
+
+<p>Gene2 chemotatic strength:1.97</p>
+
+<p>Set Complexity: 5111</p>
+
+<p>Thus genetic algorithm derived the parameter values that can create the self organization or in other words automated the process of self organization in simulator. </p>
 
       <footer class="site-footer">
 
