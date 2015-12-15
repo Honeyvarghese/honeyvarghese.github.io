@@ -117,21 +117,20 @@ Self-organization of fish in the ocean(picture below) is a very good example.
 <h2>
 <a id="genetic-algorithm" class="anchor" href="#genetic-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Genetic Algorithm:</h2>
 
-<p>Genetic Algorithm is used to search the parameter values </p>
+<p>Genetic Algorithm is used as the search engine to find the parameter values that help in self organization. Genetic Algorithms uses the evolution theory to evolve the fittest chromosomes. Here we express the parameter values of the system as genes. </p>
 
-<p>Genetic Algorithms uses the evolution theory to evolve the fittest chromosomes. Here we express the parameter values of the system as genes. The fittest chromosome is the one with genes representing the parameter values that give the best result.Thus the simulation of system with those parameters will result in the self organisation of the cells.</p>
+<p>Gene 1: Represents muMax (which is the maximum specific rate at which the reaction may occur, in units of 1/ hour . This parameter will multiply each factor that follows in order to yield a net reaction rate)values</p>
+
+<p>Gene 2:Chemotatic Stength
+The fittest chromosome is the one with genes representing the parameter values that give the best result.Thus the simulation of system with those parameters will result in the self organisation of the cells.</p>
 
 <p>Here the interesting part is the analysis of the result to determine the best chromosome. In other words we need to determine weather the random cells are self organized. Idea here is to find the Set Complexity of the images produced by the simulation of cells using those parameter values. The better organised cell patterns will have better Set Complexity.</p>
 
-<p>See the below graph which represents  the change in Set Complexity as the system proceeds from a random state to an organised form</p>
-
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11384214/4132c6e4-92cb-11e5-87f3-9203c6a52f4c.PNG" alt=""></p>
-
 <p>Results:</p>
 
-<p>Using genetic algorithm I tried to change parameters muMax and chemotatic strength and measured the Set Complexity as the fitness function to arrive at the results. Shown below is the results I got.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11821154/675b5420-a325-11e5-94ab-2950bee9cdf1.png" alt=""></p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11384658/d9f60d70-92ce-11e5-9a87-40eab9acbfb4.PNG" alt=""></p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11821146/622ac18e-a325-11e5-9811-3fc682c66b37.PNG" alt=""></p>
 
       <footer class="site-footer">
 
