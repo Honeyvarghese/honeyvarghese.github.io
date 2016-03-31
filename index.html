@@ -1,71 +1,184 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Automated Modelling of Self-Organization  in Artiﬁcial Tissue Simulators using Genetic Algorithm. by Honeyvarghese</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/Honeyvarghese">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
+    <section class="page-header">
+      <h1 class="project-name">Automated Modelling of Self-Organization  in Artiﬁcial Tissue Simulators using Genetic Algorithm.</h1>
+      <h2 class="project-tagline">Honey Varghese, Intelligent Systems Project</h2>
+    </section>
 
-    <div class="wrapper">
+    <section class="main-content">
+      <p>Abstract— Simulating multi-cellular systems that models the self organization of initial random distribution of cells to regular cellular networks can be very useful in the ﬁeld of bio-engineering and medical applications. These models incorporate a set of parameters that represent the physical and chemical properties of the biological system.These parameters are used to deﬁne the components of the models that when simulated reproduce the behavior of the biological system. Genetic Algorithm can be used to search for those parameters that contribute to the self organization capability of the system. Set Complexity Algorithm is used for the measuring the regularity of the resulting cellular pattern to determine the ﬁtness of the parameters set derived by the Genetic Algorithm. </p>
 
-      <section>
-        <div id="title">
-          <h1>Automated Modelling of Self-Organization  in Artiﬁcial Tissue Simulators using Genetic Algorithm.</h1>
-          <p>Honey Varghese, Intelligent Systems Project</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/Honeyvarghese">Honeyvarghese</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+<h2>
+<a id="aim-of-the-project" class="anchor" href="#aim-of-the-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Aim of the Project:</h2>
 
-        <p>Self-organization is a process where some form of overall order or coordination arises out of the local interactions between smaller component parts of an initially disordered system.</p>
+<p>Simulation of small set of biologically plausible cell behaviors that can reproduce the initial self-organization of endothelial cells (the cells lining the inner walls of blood vessels).</p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11380976/8936e9da-92b6-11e5-9b1f-c653cb380ea7.jpg" alt=""> </p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11707192/34fdde78-9ebe-11e5-8f8e-050b50b95320.PNG" alt=""></p>
+
+<h2>
+<a id="how-is-it-useful" class="anchor" href="#how-is-it-useful" aria-hidden="true"><span class="octicon octicon-link"></span></a>How is it useful?</h2>
+
+<p>A better understanding of the mechanisms by which endothelial cells organize into blood vessels is crucial if we need to enhance or suppress blood vessel growth under pathological conditions, including diabetes, wound healing, and tumor growth. </p>
+
+<h2>
+<a id="story-behind-self-organization" class="anchor" href="#story-behind-self-organization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Story behind self-organization..</h2>
+
+<p>Self-organization is a process where some form of overall order or coordination arises out of the local interactions between smaller component parts of an initially disordered system.</p>
+
+<p>If we look around we can see self organization in physical, chemical,biological and cognitive systems.
+Self-organization of fish in the ocean(picture below) is a very good example.
+<img src="https://cloud.githubusercontent.com/assets/15885993/11676541/6ea3eab0-9df0-11e5-971b-0b7eb98823bb.jpg" alt=""></p>
 
 <p>And there is a certain type of energy flow that has self-organized into life.  Each cell within our bodies is a self-organized mass of swirling energy that maintains itself using a natural form of intelligence known as animate intelligence.  And each one of those billions of cells connects with others, to form organs, blood flow, a nervous system, and all the other miraculous complexities that coalesce to make you and me into the mind/body organism known as a human being.</p>
 
-<p>Multi-cellular models that facilitates the self organization of initial random distribution of cells to regular cellular networks can be very useful in the ﬁeld of bio-engineering and medical applications. These models incorporate a set of parameters that represent the physical and chemical properties of the biological system.These parameters are used to deﬁne the components of the models that when simulated reproduce the behavior of the biological system. </p>
+<h2>
+<a id="project-procedure-and-implementation" class="anchor" href="#project-procedure-and-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Project Procedure and Implementation</h2>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11381590/1d16e60c-92ba-11e5-87c5-c63a111752b6.PNG" alt=""></p>
+<p>A search engine based on genetic algorithm is used to derive the value of cell properties(parameters) that will result in the self-organization of cells when simulated.</p>
 
-<p>The challenge here is to find the parameter values that can help in modelling the self organization. Genetic Algorithm is used to search the parameter space. </p>
+<p>The picture shown below describes the how the search engine works.</p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11382350/87ff5162-92be-11e5-90ea-7b2b00e3f99f.png" alt=""></p>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11704526/ba526f1c-9ea5-11e5-9c83-e42b5de1d85c.png" alt=""></p>
 
-<p>Genetic Algorithms uses the evolution theory to evolve the fittest chromosomes. Here we express the parameter values of the system as genes. The fittest chromosome is the one with genes representing the parameter values that give the best result.Thus the simulation of system with those parameters will result in the self organisation of the cells.</p>
+<h2>
+<a id="implementation-details-of-the-engine" class="anchor" href="#implementation-details-of-the-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>Implementation details of the engine:</h2>
+
+<h2>
+<a id="simulator-idynomics" class="anchor" href="#simulator-idynomics" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulator: IDynomics</h2>
+
+<p>The iDynoMiCS software simulates the growth of microbial communities. iDynoMiCS is written in Java, and uses XML protocol files that allow one to specify easily many different types of simulations. iDynoMiCS writes plain-text XML files as output, and these may be processed using any number of software tools (though we provide some general post-processing routines that run in Matlab and R). In addition to XML files, iDynoMiCS also writes files for POV-Ray, which is used to render 3-D images of the simulation.</p>
+
+<h3>
+<a id="xml-files" class="anchor" href="#xml-files" aria-hidden="true"><span class="octicon octicon-link"></span></a>XML Files:</h3>
+
+<p>These are protocol files that define the cell properties(parameters). iDynomics take this protocol files as input and simulate cells that have the property described in the property file.</p>
+
+<h2>
+<a id="pov-ray-files-and-converter" class="anchor" href="#pov-ray-files-and-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Pov-ray Files and converter</h2>
+
+<p>iDynomics output files of the type POV-Ray. Java code can be used to execute these files in POV-ray software and it will produce the png Images. These images describes the growth pattern of the cells at timed interval.</p>
+
+<h2>
+<a id="image-processing" class="anchor" href="#image-processing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image processing:</h2>
+
+<p>In order to analyze the regularity of the images we need to clean and make the image smooth.Cleaning is done by removing the light source and reflection while simulating(by changing the header files before POV Ray execution). Smoothing is done by process of dilating and eroding technique. The Image below demonstrates the change in image. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11708367/dfc11df4-9ecb-11e5-832d-d27257fd0050.PNG" alt=""></p>
+
+<h2>
+<a id="set-complexity-algorithm" class="anchor" href="#set-complexity-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set Complexity algorithm</h2>
+
+<p>Set Complexity  algorithm is used in this project to measure the regularity of the final cellular patterns generated by the simulator.</p>
+
+<p>Definition and Calculation:</p>
+
+<p>Set complexity can be used to measure the information content of a regulatory network, its temporal dynamics, and the spatial pattern produced. By measuring information content, set complexity can distinguish between critical systems that encode maximal information, and ordered and chaotic systems that encode less information. Set complexity (symbolized as Ψ) applies Kolmogorov's intrinsic complexity  to quantify contextual information in a set of objects by discounting pairs of objects that are randomly related or redundant. Set complexity is independent of any specific application, so long as each object in the set can be encoded as a string.</p>
+
+<p>The Kolmogorov complexity of two strings is the length of the shortest algorithm that can transform one string to the other. Exact computation is undecidable, but minimum algorithm length can be approximated by the normalized compression distance (NCD). NCD is defined below, where si and sj are strings, si + sj is the concatenation of si and sj, and C(s) is the compression size of string s:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11728628/21b23bcc-9f48-11e5-9205-55adfc0be8df.PNG" alt=""></p>
+
+<p>NCD is a measure of the similarity of the two strings. If the two strings compress smaller together than separately, then NCD will be closer to 0.0. Consider the following cases, where sr is from the set of random strings and ss are simple strings containing regular patterns:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11728633/297c2cb4-9f48-11e5-9ca1-07b758a4a8a2.PNG" alt=""></p>
+
+<p>Then set complexity of a set of n strings S = {s1, …, sn} is defined:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11728631/25bfa0c4-9f48-11e5-90e5-3c24560c0be2.PNG" alt=""></p>
+
+<p>where dij = NCD(si, sj). The distance dij is maximized when NCD(si, sj) = 0.5, which occurs when C(si + sj) ≃ C(si)/2 − C(sj), assuming C(si) &gt; C(sj). In the case of strings in the set being similar, Ψ(S) ≃ 0 indicating the set belongs to the ordered domain and contains little information. Chaotic systems generate strings that appear random and so Ψ(S) is minimized, but not zero because of the C(si) multiplicative term. In the various papers it is shown that Ψ(S) is maximized when the set of strings describe an information dense critical system.</p>
+
+<p>Note: Computing set-complexity involves applying loss-less compression on the input objects, which are encoded as strings. When the objects are images, encoding them as strings is computationally intensive and potentially unnecessary. So in this project a method of computing the set-complexity of a set of images by using image compression directly thereby avoiding the slow conversion to strings is used. In addition to that for better compression, the image processing technique described in the previous section is also used.</p>
+
+<h1>
+<a id="set-complexity-analysis" class="anchor" href="#set-complexity-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a>Set Complexity analysis:</h1>
+
+<p>The graph below shows the analysis of the set complexity values over a sample image set that slowly reaches to regular pattern from the initial random  state.The set complexity is calculated by considering a moving window of 4 images over the image series generated by the simulator.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11709510/6d4459c6-9ed5-11e5-89ff-c90274cf3fc7.PNG" alt="">
+<img src="https://cloud.githubusercontent.com/assets/15885993/11709537/ad4aeb70-9ed5-11e5-96ae-07b32f30f9fa.PNG" alt="">
+<img src="https://cloud.githubusercontent.com/assets/15885993/11709549/c1a2455a-9ed5-11e5-8654-0b9941ecf5b3.PNG" alt="">
+<img src="https://cloud.githubusercontent.com/assets/15885993/11709561/d6823610-9ed5-11e5-97a2-5b6f1a7d3d90.PNG" alt=""></p>
+
+<p>Observation: The initial portion of the graph(1-7) which represents the increase in set complexity as the regularity of the image increase. In other words, completely random series the set complexity is low.</p>
+
+<p>The observation is quite useful in selecting Set Complexity as the fitness function that describes the regularity of the image.</p>
+
+<h2>
+<a id="genetic-algorithm" class="anchor" href="#genetic-algorithm" aria-hidden="true"><span class="octicon octicon-link"></span></a>Genetic Algorithm:</h2>
+
+<p>Genetic Algorithm is used as the search engine to find the parameter values that help in self organization. Genetic Algorithms uses the evolution theory to evolve the fittest chromosomes. Here we express the parameter values of the system as genes. </p>
+
+<p>Gene 1: Represents muMax (which is the maximum specific rate at which the reaction may occur, in units of 1/ hour . This parameter will multiply each factor that follows in order to yield a net reaction rate)values</p>
+
+<p>Gene 2:Chemotatic Stength
+The fittest chromosome is the one with genes representing the parameter values that give the best result.Thus the simulation of system with those parameters will result in the self organisation of the cells.</p>
 
 <p>Here the interesting part is the analysis of the result to determine the best chromosome. In other words we need to determine weather the random cells are self organized. Idea here is to find the Set Complexity of the images produced by the simulation of cells using those parameter values. The better organised cell patterns will have better Set Complexity.</p>
 
-<p>See the below graph which represents  the change in Set Complexity as the system proceeds from a random state to an organised form</p>
+<h2>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span class="octicon octicon-link"></span></a>Results:</h2>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11384214/4132c6e4-92cb-11e5-87f3-9203c6a52f4c.PNG" alt=""></p>
+<p>Using Java Genetic Algorithm Package(JGAP) project implementation is done and arrived at the following results.</p>
 
-<p>Results:</p>
+<p>Here Images are named using convention: SetComplexity (muMax, Chemotatic Strength)
+ie Image named 5111(234,1.9) implies images have Set Complexity=5111 and the parameter values used for simulation are muMax=234 and chemotatic strength=1.9</p>
 
-<p>Using genetic algorithm I tried to change parameters muMax and chemotatic strength and measured the Set Complexity as the fitness function to arrive at the results. Shown below is the results I got.</p>
+<p>The following result is obtained in the initial iteration of GA with Init Area 750(here init area is proportional to the number of cells in the simulation)</p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/15885993/11384658/d9f60d70-92ce-11e5-9a87-40eab9acbfb4.PNG" alt=""></p>
-      </section>
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11825714/e69dd79a-a33d-11e5-9c4d-35cc91cc3140.png" alt=""></p>
 
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11821146/622ac18e-a325-11e5-9811-3fc682c66b37.PNG" alt=""></p>
+
+<p>The image near the star corresponds to the final image with maximum set complexity.</p>
+
+<p>Next set of experiment was conducted with 1500 Init area, so that the network formation is more obvious.The following results were obtained:</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11825187/d74f3426-a33a-11e5-9282-db8e316e2ef7.PNG" alt=""></p>
+
+<p>From the graph we observe that the more organized images are given a lower set complexity. A close look at the images revels that the reduction in set complexity of images with a regular network is because of the images are not smooth.</p>
+
+<p>Picture below shows a closer view of the image with a regular pattern.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11827907/0a134d9a-a34d-11e5-9173-ddbb64c0c050.PNG" alt=""></p>
+
+<p>Since the images are not smooth, it decrease the compression of the images. So the image processing technique mentioned in the above image processing section of the project is carried out and the better results shown below are obtained .</p>
+
+<p>Evolution of pattern by GA when set complexity is derived from the processed images </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11825188/d8ecc44c-a33a-11e5-9188-7b13d8464d18.PNG" alt=""></p>
+
+<p>Heat Map showing the Set Complexity Values corresponding to the parameter values chosen by the GA</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/15885993/11825197/e070d320-a33a-11e5-8643-3829c3c3f107.png" alt=""></p>
+
+<p>Here thus GA finally arrived at the best chromosomes with genes as expressed below</p>
+
+<p>Gene1:( muMax:597)</p>
+
+<p>Gene2:(Chemotatic Strength:1.97)</p>
+
+<p>Set Complexity of the derived Image: 5111</p>
+
+<p>Thus genetic algorithm derived the parameter values that can create the self organization or in other words automated the process of self organization in simulator. </p>
+
+      <footer class="site-footer">
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
   </body>
 </html>
