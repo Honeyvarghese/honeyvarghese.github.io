@@ -15,6 +15,9 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 
 import Constatnts.JgapConstants;
+import idynomicsJgap.GaussianFilter;
+import idynomicsJgap.ImageDilation;
+import idynomicsJgap.ImageErosion;
 import idynomicsJgap.WriteToFile;
 
 import java.awt.Graphics2D;
@@ -47,8 +50,11 @@ public class SetComplexityFinder {
 	static List<File> FileNames = new ArrayList<File>();
 	static List<File> CombinedFileNames = new ArrayList<File>();
 	static int count = 0;
+	 //static File[] fileSet1= new File[4];
+	//static File[] fileSet2= new File[4];
+	static BufferedImage immg = null;
 
-	public static double calcuate() throws IOException, InterruptedException
+	public static double calcuate() throws Exception
 
 	{	String[] filepath=LatestModifiedFileReader.povTopngConversion();
 	File[] fileSet1= new File[4];
@@ -96,13 +102,33 @@ fileSet1
 		for (int i = 0; i < 4; i++) {
 			BufferedImage img1 = null;
 			img1 = ImageIO.read(fileSet1[i]);
+			immg = ImageIO.read(fileSet1[0]);
+			
+			ImageIO.write(img1
+					, "png", new File("D:\\ImageSeries\\"+SysTime.time()+".png"));
+			
 			BufferedImage bufferedImage = ImageIO.read(fileSet1[i]);
-			BufferedImage bufferedIm = new BufferedImage(bufferedImage.getWidth(), bufferedImage.getHeight(),
-					BufferedImage.TYPE_BYTE_BINARY);
+			//BufferedImage bufferedIm = new BufferedImage(bufferedImage.getWidth(), bufferedImage.getHeight(),
+					//BufferedImage.TYPE_BYTE_BINARY);
+			//Erode and dilate Image to get smooth curves
+			/*BufferedImage bufferedIm =ImageErosion.imageErode(
+			ImageErosion.imageErode(
+            ImageDilation.imageDilation(
+	        ImageErosion.imageErode(bufferedImage))));*/
+			GaussianFilter cv= new GaussianFilter();
+
+	        BufferedImage bufferedIm=cv.filter(cv.filter(
+	        		cv.filter(cv.filter(cv.filter(bufferedImage,bufferedImage), bufferedImage), bufferedImage), bufferedImage), bufferedImage);
+			//BufferedImage bufferedIm = new BufferedImage(bufferedIm1.getWidth(), bufferedIm1.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+
 			Graphics2D graphics = bufferedIm.createGraphics();
-			graphics.drawImage(bufferedImage, 0, 0, null);
+			graphics.drawImage(bufferedIm, 0, 0, null);
 			String Filenam = JgapConstants.COMPRESSED_IMAGE_FILE_PATH + "//" + i + ".png";
-			ImageIO.write(bufferedIm, "png", new File(Filenam));
+			
+			ImageIO.write(bufferedIm
+					, "png", new File(Filenam));
+			ImageIO.write(bufferedIm
+					, "png", new File("D:\\ImageSeries\\"+SysTime.time()+".png"));
 			File file = new File(Filenam);
 			cValue.put(i, file.length());
 			//  
@@ -116,7 +142,16 @@ fileSet1
 					BufferedImage img2 = null;
 					img2 = ImageIO.read(fileSet1[j]);
 
-					BufferedImage joinedImg = joinBufferedImage(img1, img2);
+					BufferedImage joinedImg1 = joinBufferedImage(img1, img2);
+					/*BufferedImage joinedImg =ImageErosion.imageErode(
+							ImageErosion.imageErode(
+				            ImageDilation.imageDilation(
+					        ImageErosion.imageErode(joinedImg1))));*/
+
+					GaussianFilter cv1= new GaussianFilter();
+					 BufferedImage joinedImg=cv.filter(cv.filter(
+				        		cv.filter(cv.filter(cv.filter(joinedImg1,joinedImg1), joinedImg1), joinedImg1), joinedImg1), joinedImg1);					//BufferedImage joinedImg = new BufferedImage(joinedImg3.getWidth(), joinedImg3.getHeight(), BufferedImage.TYPE_BYTE_BINARY);
+
 					// change to i_j if needed
 					// String
 					// joinedFilename=JgapConstants.COMBINED_IMAGE_FILE_PATH+"//"+FileNames[i].getName()+"_"+FileNames[j].getName();
@@ -124,6 +159,8 @@ fileSet1
 							+ ".png";
 
 					boolean suc = ImageIO.write(joinedImg, "png", new File(joinedFilename));
+					//ImageIO.write(joinedImg
+							//, "png", new File("D:\\ImageSeries\\"+SysTime.time()+".png"));
 					// ImageIO.write(bufferedIm, "png", new File(Filenam));
 
 					File file1 = new File(joinedFilename);
@@ -167,7 +204,7 @@ fileSet1
 
 	}
 
-	private static double setcomplexityCalculator() {
+	private static double setcomplexityCalculator() throws IOException {
 		double setComplexity;
 		double sum,sc;
 		//for (int t = 0; t < 4; t++) {
@@ -203,6 +240,11 @@ fileSet1
 	
             }
 				setComplexity=sc/4*(4-1);
+				BufferedImage image = null;
+				//image = ImageIO.read(fileSet1[2]);
+				ImageIO.write(immg
+						, "png", new File("D:\\Setcomplexity1\\"+setComplexity+".png"));
+				
 				 
 				return setComplexity;
 			}
@@ -226,7 +268,7 @@ fileSet1
 		int height = Math.max(img1.getHeight(), img2.getHeight()) + offset;
 		// create a new buffer and draw two image into the new image
 		// compression............
-		BufferedImage newImage = new BufferedImage(wid, height, BufferedImage.TYPE_BYTE_BINARY);
+		BufferedImage newImage = new BufferedImage(wid, height, BufferedImage.TYPE_INT_RGB);
 		Graphics2D g2 = newImage.createGraphics();
 		Color oldColor = g2.getColor();
 		// fill background

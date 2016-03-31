@@ -46,9 +46,6 @@ public class XMLReader {
 				Element eElement = (Element) node;
 				if (eElement.getAttribute("name").equals("muMax")) {
 					 
-
-					 
-
 					String muMaxstr =Double.toString( (double) map.get("muMax"));
 
 					eElement.setTextContent(muMaxstr);
@@ -78,7 +75,24 @@ public class XMLReader {
 							//}
 
 						}
+                        
+                        
+                        NodeList company2 = doc.getElementsByTagName("tightJunction");
+						String cstrength2 = Double.toString((double) map.get("tightJunctionstiffness"));
+                        for (int i = 0; i < company2.getLength(); i++) {
+							Node node = company2.item(i);
+							Element eElement = (Element) node;
+								 
+								eElement.setAttribute("stiffness", cstrength2);
+							//System.out.println("..");
+								DOMSource source = new DOMSource(doc);
+								transformer.transform(source, result);
+							//}
+
+						}
 			
+			
+                        
 
 			
 

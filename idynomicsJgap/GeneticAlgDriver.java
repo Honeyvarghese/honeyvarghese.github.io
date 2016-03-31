@@ -26,7 +26,7 @@ public class GeneticAlgDriver {
 			  // We construct it with the target amount of change provided
 			  // by the user.
 			  // ------------------------------------------------------------
-			  int targetAmount = 5;
+			  int targetAmount = 2;
 			  SetComplexityFitnessFunction myFunc =
 			    new SetComplexityFitnessFunction(targetAmount );
 
@@ -43,10 +43,11 @@ public class GeneticAlgDriver {
 			  // also lets us specify a lower and upper bound, which we set
 			  // to sensible values for each coin type.
 			  // --------------------------------------------------------------
-			  Gene[] sampleGenes = new Gene[ 2];
+			  Gene[] sampleGenes = new Gene[ 3];
 
-			  sampleGenes[0] = new IntegerGene(conf, 400, 600 ); 
-			  sampleGenes[1] = new DoubleGene(conf, 1, 3);  // Quarters
+			  sampleGenes[0] = new IntegerGene(conf, 599,600 ); 
+			  sampleGenes[1] = new DoubleGene(conf, 1.99,2); 
+			  sampleGenes[2]=new DoubleGene(conf,0.2,0.3);
 
 			 
 			  Chromosome sampleChromosome = new Chromosome(conf, sampleGenes );
@@ -60,23 +61,21 @@ public class GeneticAlgDriver {
 			  // the population each round. We'll set the population size to
 			  // 500 here.
 			  // --------------------------------------------------------------
-			  conf.setPopulationSize( 5 );
+			  conf.setPopulationSize( 2);
 			  Genotype population = Genotype.randomInitialGenotype( conf );
 			  population.evolve();
 
-			  IChromosome bestSolutionSoFar = population.getFittestChromosome();
 			  //IChromosome bestSolutionSoFar;
-
-			  for( int i = 0; i < 5; i++ )
+			  for( int i = 0; i <4; i++ )
 			  {
+				  IChromosome bestSolutionSoFar = population.getFittestChromosome();
+			  		System.out.println("Best so far.."+ bestSolutionSoFar.getFitnessValue());
+
 			      population.evolve();
 			  }
 
 			   
 
-			  System.out.println(
-					  SetComplexityFitnessFunction.getParameterValue(
-			          bestSolutionSoFar, 0 ) + " quarters." );
 
 
 

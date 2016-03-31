@@ -70,6 +70,7 @@ public class SetComplexityFitnessFunction extends FitnessFunction {
 	}
 
 		map.put("muMax",(double) parameterValue1 );
+		//updating chemostaticStrength
 		double parameterValue2=getParameterValue(a_subject,1);
 		try {
 			WriteToFile.write("chemotaticstrength: "+parameterValue2);
@@ -80,7 +81,17 @@ public class SetComplexityFitnessFunction extends FitnessFunction {
 
 		map.put("chemotaticstrength",(double) parameterValue2 );
 
+		//updating 
 		
+		double parameterValue3=getParameterValue(a_subject,2);
+		try {
+			WriteToFile.write("tightJunction stiffness: "+parameterValue3);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+
+		map.put("tightJunctionstiffness",(double) parameterValue3);
 		try {
 			//update contact xml of iDynomica with new values in chromosome
 			XMLReader.updateParameter(map);
@@ -89,10 +100,10 @@ public class SetComplexityFitnessFunction extends FitnessFunction {
 			e.printStackTrace();
 		}
 		  //run idynomics
-		 Idynomics id =new Idynomics();
+		Idynomics id =new Idynomics();
 		    String[] args={};
 		    try {
-				id.mainFunction(args);
+				//Idynomics.mainFunction(args);
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -109,9 +120,15 @@ public class SetComplexityFitnessFunction extends FitnessFunction {
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			try {
 				WriteToFile.write("Set Complexity:- "+setComplexity);
+				
+				
+				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

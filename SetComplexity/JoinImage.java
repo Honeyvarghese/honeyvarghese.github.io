@@ -16,6 +16,7 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 
 import Constatnts.JgapConstants;
+import idynomicsJgap.GaussianFilter;
 
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
@@ -34,7 +35,6 @@ import Constatnts.JgapConstants;
 /**
  * This code try to join two BufferedImage
  * 
- * @author wangdq 2013-12-29
  * 
  */
 
@@ -86,6 +86,11 @@ public class JoinImage {
 					BufferedImage.TYPE_BYTE_BINARY);
 			BufferedImage bufferedIm = new BufferedImage(bufferedIm1.getWidth(), bufferedIm1.getHeight(),
 					Image.SCALE_SMOOTH);
+			//BLURING
+			//GaussianFilter cv= new GaussianFilter();
+            //BufferedImage bufferedIm=cv.filter(bufferedIm2, bufferedIm2);
+
+			
 			
 			
 			Graphics2D graphics = bufferedIm.createGraphics();
@@ -209,8 +214,10 @@ public class JoinImage {
 		// create a new buffer and draw two image into the new image
 		// compression............
 		BufferedImage newImage1 = new BufferedImage(wid, height, BufferedImage.TYPE_BYTE_BINARY);
+		
 		BufferedImage newImage= new BufferedImage(wid, height, newImage1.SCALE_SMOOTH);
-
+		//GaussianFilter cv= new GaussianFilter();
+        //BufferedImage newImage=cv.filter(newImage2, newImage2);
 		
 		Graphics2D g2 = newImage.createGraphics();
 		Color oldColor = g2.getColor();
